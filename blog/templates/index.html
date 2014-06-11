@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+</head>
+<body>
+{% for post in posts%}
+
+
+<h1>{{post.header}}</h1>
+<p>{{post.image}}</p>
+<p>{{post.timestamp | timesince}}</p>
+	
+	<a href="blog/{{post.slug}} ">ver mas</a>
+
+ {% endfor%}
+
+
+
+
+
+
+</body>
+</html>
