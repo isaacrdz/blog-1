@@ -10,11 +10,11 @@
 {% for post in posts%}
 
 <h1>{{post.header}}</h1>
+<p>{{post.timestamp | timesince}}</p>
 {% thumbnail post.image "250"  as im %}
     <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
 {% endthumbnail %}
-<p>{{post.image}}</p>
-<p>{{post.timestamp | timesince}}</p>
+<p>{{post.content|truncatechars:15}} </p>
 	
 	<a href="blog/{{post.slug}} ">ver mas</a>
 

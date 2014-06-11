@@ -1,11 +1,11 @@
 
 {% load thumbnail %}
 <h1>{{post.header}}</h1>
-{% thumbnail post.image "250"  as im %}
+{% thumbnail post.image "500"  as im %}
     <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
 {% endthumbnail %}
-<p>{{post.image}}</p>
-<p>{{post.content}}</p>
+
+<p>{{post.content  }}</p>
 <p>{{post.timestamp | timesince}}</p>
 
 
